@@ -8,6 +8,26 @@ const db = require('./db_config'); // Importa la configuración de la base de da
 const categoriasRouter = require('./routes/categorias');
 const productosRouter = require('./routes/productos');
 const usuariosRouter = require('./routes/usuarios');
+const ubicacionUsuarioRouter = require('./routes/ubicacion_usuario');
+const bannersRouter = require('./routes/banners');
+const carritosRouter = require('./routes/carritos');
+const carritoDetalleRouter = require('./routes/carrito_detalle');
+const cuentasEmpresaRouter = require('./routes/cuentas_empresa');
+const cuentasPersonalesRouter = require('./routes/cuentas_personales');
+const detalleOrdenRouter = require('./routes/detalle_orden');
+const direccionesRouter = require('./routes/direcciones');
+const enviosRouter = require('./routes/envios');
+const imagenesProductoRouter = require('./routes/imagenes_producto');
+const iniciosSesionRouter = require('./routes/inicios_sesion');
+const logsActividadRouter = require('./routes/logs_actividad');
+const mensajesRouter = require('./routes/mensajes');
+const ordenesRouter = require('./routes/ordenes');
+const pagosRouter = require('./routes/pagos');
+const productosDestacadosRouter = require('./routes/productos_destacados');
+const productosPromocionadosRouter = require('./routes/productos_promocionados');
+const promocionesRouter = require('./routes/promociones');
+const tiendasOficialesRouter = require('./routes/tiendas_oficiales');
+const tokensAutenticacionRouter = require('./routes/tokens_autenticacion');
 // ... importa otros routers a medida que los crees ...
 
 const app = express();
@@ -104,6 +124,26 @@ app.get('/estado-db', async (req, res) => {
 app.use('/api/categorias', categoriasRouter);
 app.use('/api/productos', productosRouter);
 app.use('/api/usuarios', usuariosRouter);
+app.use('/api/ubicacion_usuario', ubicacionUsuarioRouter);
+app.use('/api/banners', bannersRouter);
+app.use('/api/carritos', carritosRouter);
+app.use('/api/carrito_detalle', carritoDetalleRouter);
+app.use('/api/cuentas_empresa', cuentasEmpresaRouter);
+app.use('/api/cuentas_personales', cuentasPersonalesRouter);
+app.use('/api/detalle_orden', detalleOrdenRouter);
+app.use('/api/direcciones', direccionesRouter);
+app.use('/api/envios', enviosRouter);
+app.use('/api/imagenes_producto', imagenesProductoRouter);
+app.use('/api/inicios_sesion', iniciosSesionRouter);
+app.use('/api/logs_actividad', logsActividadRouter);
+app.use('/api/mensajes', mensajesRouter);
+app.use('/api/ordenes', ordenesRouter);
+app.use('/api/pagos', pagosRouter);
+app.use('/api/productos_destacados', productosDestacadosRouter);
+app.use('/api/productos_promocionados', productosPromocionadosRouter);
+app.use('/api/promociones', promocionesRouter);
+app.use('/api/tiendas_oficiales', tiendasOficialesRouter);
+app.use('/api/tokens_autenticacion', tokensAutenticacionRouter);
 // ... app.use('/api/otro-recurso', otroRecursoRouter); ...
 
 // === Middleware para manejar rutas no encontradas (404) ===
